@@ -1,0 +1,16 @@
+<h1>Editing donation</h1>
+
+<% form_for(@donation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @donation %> |
+<%= link_to 'Back', donations_path %>
